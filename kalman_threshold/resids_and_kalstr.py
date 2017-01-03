@@ -102,5 +102,4 @@ def kal(dwell, telem, limit=20, catalog=None, nowflags=False):
         kal = (~fids & trak & last_trak & ir & sp & dp & ms
                 & (np.abs(yag_offs) < limit) & (np.abs(zag_offs) < limit))
 
-    raise ValueError
     return telem['AOKALSTR'].times, kal
